@@ -1,0 +1,21 @@
+{
+    "default": {
+        "roleid" : 1,
+        "itemid" : 1
+    },
+
+    "createrole": {
+        "roleid" : 1,
+        "itemid" : 1
+    },
+
+    "rolelogin": {
+        "roleid" : 1,
+        "itemid" : 1
+    },
+    
+    "charge": {
+        "roleid" : 1,
+        "itemid" : 1
+    }
+}

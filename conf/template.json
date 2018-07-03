@@ -1,0 +1,134 @@
+{
+    "template": "format_*",
+    "settings" : { 
+        "index": {
+            "number_of_shards": "10",
+            "number_of_replicas": "1",
+            "refresh_interval": "30s", 
+            "translog.durability":"async",
+
+            "translog.flush_threshold_size":"1024m",
+            "max_result_window": "5000000",
+            "max_rescore_window":"20000",
+            "unassigned.node_left.delayed_timeout": "10m",
+            "search.slowlog.threshold.query.warn":"30s",
+            "indexing.slowlog.threshold.index.warn": "10s" 
+        }
+    }, 
+    "mappings": {
+        "_default_": {
+            "numeric_detection": true,
+            "dynamic_date_formats" : ["strict_date_optional_time", "yyyy-MM-dd HH:mm:ss"],
+            "properties":{
+                "account" : {
+                    "type":"keyword"
+                },
+                "userid" : {
+                    "type":"keyword"
+                },
+                "roleid" : {
+                    "type":"keyword"
+                },
+                "gameuserid" : {
+                    "type":"keyword"
+                },
+                "type" : {
+                    "type":"keyword"
+                },
+                "strtype" : {
+                    "type":"keyword"
+                },
+                "chargetype" : {
+                    "type" :"keyword"
+                },
+                "purchasetype" : {
+                    "type" :"keyword"
+                },
+                "parttype" : {
+                    "type" :"keyword"
+                },
+                "totalcash" : {
+                    "type":"float"
+                },
+                "price":{
+                    "type":"float"
+                },
+                "lev":{
+                    "type":"short"
+                },
+                "mac":{
+                    "type":"keyword"
+                },
+                "deviceid":{
+                    "type":"keyword"
+                },
+                "money" : {
+                    "type":"long"
+                },
+                "lockgold" : {
+                    "type":"long"
+                },
+                "gold" : {
+                    "type":"long"
+                },
+                "taskid":{
+                    "type":"keyword"
+                },
+                "currentuser" : {
+                    "type":"short"
+                },
+                "leaguenum" : {
+                    "type":"short"
+                },
+                "totalnum" : {
+                    "type":"long"
+                },
+                "changecount" : {
+                    "type":"long"
+                },
+                "itemid":{
+                    "type":"keyword"
+                },
+                "leadername" : {
+                    "type":"keyword"
+                },
+                "reason" : {
+                    "type":"keyword"
+                },
+                "iteminfo" : {
+                    "type":"text"
+                },
+                "attachinfo" : {
+                    "type":"text"
+                },
+                "funcname" : {
+                    "type":"text"
+                },
+                "geminfo" : {
+                    "type":"text"
+                }
+            }
+        },
+        "charge": {
+            "numeric_detection": true,
+            "dynamic_date_formats" : ["strict_date_optional_time", "yyyy-MM-dd HH:mm:ss"],
+            "properties":{
+                "account" : {
+                    "type":"keyword"
+                },
+                "userid" : {
+                    "type":"keyword"
+                },
+                "gameuserid" : {
+                    "type":"keyword"
+                },
+                "type" : {
+                    "type":"keyword"
+                },
+                "price":{
+                    "type":"float"
+                }
+            }
+        }
+    }
+}

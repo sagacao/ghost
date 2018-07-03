@@ -1,0 +1,51 @@
+{
+	"Optional": {
+		"Elastic" : true,
+		"Mongo" : false,
+		"Mysql" : false,
+	},
+	
+	"Mysql" : {
+	    "Host" : "127.0.0.1:3306",
+	    "Db" : "log",
+	    "Password" : "123456",
+	    "user" : "root",
+		"path" : "C:/Program Files (x86)/MySQL/MySQL Server 5.5/" 
+	},
+
+	"Mongo": {
+		"Worker" : 1,
+		"ChanLen" : 4096,
+		"URL" : "192.168.1.56:27017",
+		"filter" : {"0" : "createrole",
+			"1" : "rolelogin", 
+			"2":"rolelogout|onlineuser|levelup|charge"
+		} 
+	},
+	
+	"Tcp": {
+		"Addr" : "192.168.1.100:4008"
+	},
+
+	"Report": {
+		"URL" : "http://127.0.0.1:8008/user"
+	},
+
+	"Output": {
+		"Worker" : 1,
+		"ChanLen" : 4096,
+		"Host" : "127.0.0.1",
+		"Port" : "9200"
+	},
+
+    "Log":{
+        "cfg" : "{\"filename\":\"./logs/server.log\"}",
+        "console" : true
+	},
+	
+	"File":{
+		"filename" : "data/%v/format.log",
+		"maxlines" : 1000000,
+        "maxsize" : 134217728
+	}
+}
